@@ -2,9 +2,38 @@
 <html>
     <head>
         <title> Welcome to Me! </title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,
+            wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
         <style>
-
+            body { /* main text */
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: 400;
+                font-style : normal;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+                color: #333;
+            }
+            h1 { /* main page title*/
+                text-align: center;
+                margin-top: 50px;
+                font-weight: 700;
+                font-style: italic;
+            }
+            h2 { /* section titles */
+                font-weight: 600;
+                font-style: normal;
+            }
+            h3 { /* navigation titles */
+                font-weight: 500;
+                font-style: italic;
+                font-variant: small-caps;
+                font-stretch: expanded;
+            }
+            h4 { /* subtitles & comments */
+                font-weight: 300;
+                font-style: italic;
+            }
         </style>
     </head>
 
@@ -20,5 +49,24 @@
     </script>
 
     <body>
-        
-        </html>
+        <h1> Welcome to My Personal Website! </h1>
+        <h2> About Me </h2>
+        <p> Hello! My name is Kaylie and I am a software developer with a passion for creating innovative solutions. I have experience in various programming languages and frameworks, and I enjoy learning new technologies. In my free time, I like to explore the outdoors, read books, and experiment with new recipes in the kitchen. Feel free to explore my website to learn more about me and my work! </p>
+
+        <h2> Projects </h2>
+        <h3> Project 1: Portfolio Website </h3>
+        <p> Description: A personal portfolio website showcasing my skills, projects, and experience. Built using HTML, CSS, and JavaScript. </p>
+
+        <h3> Project 2: Task Manager App </h3>
+        <p> Description: A web application that allows users to manage their tasks and to-do lists. Built using React and Node.js. </p>
+
+        <h3> Project 3: E-commerce Website </h3>
+        <p> Description: An online store that sells various products. Built using Django and PostgreSQL. </p>
+
+        <h2> Contact Me </h2>
+        <p> If you would like to get in touch with me, please feel free to reach out via LinkedIn or email. I look forward to connecting with you! </p>
+        <button onclick="connectLinkedin()"> Connect on LinkedIn </button>
+        <button onclick="connectContact()"> Contact Me </button>
+    </body>
+
+</html>
