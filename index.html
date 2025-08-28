@@ -48,12 +48,30 @@
                 font-size: 26px;
             }
 
-            .mainIntro{
+            .mainIntro {
                 text-align: left;
                 padding: 24px;
                 border-radius: 8px;
                 background-color: #ffa8a8;
                 color: #f4f4f4;
+            }
+
+            .about {
+                display: flex;
+                gap: 40px;
+                align-items: flex-start;
+                margin-bottom: 40px;
+            }
+
+            .aboutText {
+                flex: 1;
+            }
+
+            .aboutImage {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                border-radius: 12px;
             }
             
         </style>
@@ -71,17 +89,22 @@
             <h1> Hey, I'm Kaylie! </h1>
             <h4> welcome to a digital slice of my life! </h4>
         </div>
-        
-        <h2> About Me </h2>
-        <p> Hello! My name is Kaylie Chen and I'm in my third year of biomedical engineering at the University of British Columbia.
-             I'm currently working on my skills in biomechanics, systems and signals, and programming, hoping to be able to bridge the 
-             gap between engineering and the medical feild. In my free time, I like to play around with frontend design and explore 
-             different mediums of art. I created this website to better showcase my projects as a portfolio, but to also introduce myself
-             in more raw and genuine version of who I am. I'm always looking for new opportunites to learn and grow, so feel free to reach out! 
-        </p>
-        <span>
-            <img src="icon.png" width="1200" height="800">
-        </span>
+
+        <div class = "about">
+            <div class = "aboutText">
+                <h2> About Me </h2>
+                <p> Hello! My name is Kaylie Chen and I'm in my third year of biomedical engineering at the University of British Columbia.
+                     I'm currently working on my skills in biomechanics, systems and signals, and programming, hoping to be able to bridge the 
+                     gap between engineering and the medical feild. In my free time, I like to play around with frontend design and explore 
+                     different mediums of art. I created this website to better showcase my projects as a portfolio, but to also introduce myself
+                     in more raw and genuine version of who I am. I'm always looking for new opportunites to learn and grow, so feel free to reach out! 
+                </p>
+            </div>
+
+            <div class = "aboutImage">
+                <img src="icon.png" width="400" height="300" style="border-radius: 12px;">
+            </div>
+        </div>
 
     </body>
 
