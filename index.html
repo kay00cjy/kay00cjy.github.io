@@ -9,37 +9,53 @@
                 font-family: 'Ubuntu', sans-serif;
                 font-weight: 400;
                 font-style: normal;
-                font-size: 18px;
-                margin: 0;
-                padding: 0;
+                font-size: 26px;
+                margin: 40px;
+                padding: 0 24px;
                 background-color: #f4f4f4;
                 color: #333;
             }
             h1 { /* main page title*/
                 margin-top: 50px;
-                font-weight: 1000;
+                margin-bottom: 50px;
+                font-weight: 800;
                 font-style: italic;
                 font-variant: small-caps;
-                font-size: 50px;
+                font-size: 90px;
             }
             h2 { /* section titles */
+                margin-top: 30px;
+                margin-bottom: 30px;
                 font-weight: 600;
                 font-style: normal;
                 font-variant: small-caps;
-                font-size: 30px;
+                font-size: 60px;
             }
             h3 { /* navigation titles */
+                margin-top: 10px;
+                margin-bottom: 20px;
                 font-weight: 500;
                 font-style: italic;
                 font-variant: small-caps;
                 font-stretch: expanded;
-                font-size: 24px;
+                font-size: 40px;
             }
             h4 { /* subtitles & comments */
+                margin-top: 10px;
+                margin-bottom: 10px;
                 font-weight: 300;
                 font-style: italic;
-                font-size: 16px;
+                font-size: 26px;
             }
+
+            .mainIntro{
+                text-align: left;
+                padding: 24px;
+                border-radius: 8px;
+                background-color: #ffa8a8;
+                color: #f4f4f4;
+            }
+            
         </style>
     </head>
 
@@ -48,15 +64,14 @@
             function connectLinkedin () {
                 window.open('https://www.linkedin.com/in/kayliecjy/', '_blank');
             }
-
-            function connectContact () {
-                
-            }
     </script>
 
     <body>
-        <h1> Hey, I'm Kaylie! </h1>
-        <h4> welcome to a digital slice of my life! </h4>
+        <div class = "mainIntro">
+            <h1> Hey, I'm Kaylie! </h1>
+            <h4> welcome to a digital slice of my life! </h4>
+        </div>
+        
         <h2> About Me </h2>
         <p> Hello! My name is Kaylie Chen and I'm in my third year of biomedical engineering at the University of British Columbia.
              I'm currently working on my skills in biomechanics, systems and signals, and programming, hoping to be able to bridge the 
@@ -67,20 +82,7 @@
         <span>
             <img src="icon.png" width="1200" height="800">
         </span>
-        <h2> Projects </h2>
-        <h3> Project 1: Portfolio Website </h3>
-        <p> Description: A personal portfolio website showcasing my skills, projects, and experience. Built using HTML, CSS, and JavaScript. </p>
 
-        <h3> Project 2: Task Manager App </h3>
-        <p> Description: A web application that allows users to manage their tasks and to-do lists. Built using React and Node.js. </p>
-
-        <h3> Project 3: E-commerce Website </h3>
-        <p> Description: An online store that sells various products. Built using Django and PostgreSQL. </p>
-
-        <h2> Contact Me </h2>
-        <p> If you would like to get in touch with me, please feel free to reach out via LinkedIn or email. I look forward to connecting with you! </p>
-        <button onclick="connectLinkedin()"> Connect on LinkedIn </button>
-        <button onclick="connectContact()"> Contact Me </button>
     </body>
 
 </html>
