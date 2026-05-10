@@ -1,0 +1,309 @@
+/* shared.css — Kaylie Chen Portfolio */
+
+:root {
+  --bg: #fdf8f5;
+  --pink: #f2d4cc;
+  --pink-mid: #e8b8ac;
+  --rose: #c4776a;
+  --rose-dark: #8b4a40;
+  --green: #7aad8f;
+  --text: #2c1f1a;
+  --text-soft: #6b4f48;
+  --cream: #faf3ee;
+  --border: rgba(196, 119, 106, 0.2);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 3rem;
+  background: rgba(253, 248, 245, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--rose-dark);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--rose); }
+
+/* PAGE HERO */
+.page-hero {
+  padding: 10rem 3rem 5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-tag {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 1rem;
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.page-title em { font-style: italic; color: var(--rose); }
+
+.page-intro {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-soft);
+  max-width: 640px;
+}
+
+.divider {
+  width: 60px;
+  height: 2px;
+  background: var(--rose);
+  margin: 2.5rem 0;
+  border-radius: 2px;
+}
+
+/* CONTENT SECTIONS */
+.content-section {
+  padding: 4rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 0.8rem;
+}
+
+.section-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  font-weight: 400;
+  margin-bottom: 1.2rem;
+  color: var(--text);
+}
+
+.section-heading em { font-style: italic; color: var(--rose); }
+
+.body-text {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: var(--text-soft);
+  margin-bottom: 1rem;
+}
+
+/* GOALS/ACHIEVEMENTS */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+.goal-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.8rem;
+}
+
+.goal-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.goal-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.goal-desc {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text-soft);
+}
+
+/* PHOTO GRID */
+.photo-section {
+  padding: 4rem 3rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.photo-placeholder {
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--pink) 0%, #f9dfd8 100%);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--rose);
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.photo-placeholder:hover { transform: scale(1.02); }
+
+.photo-placeholder .plus {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.photo-placeholder.green { background: linear-gradient(135deg, #d4e8dd 0%, #edf4f0 100%); color: #3a7a56; }
+.photo-placeholder.purple { background: linear-gradient(135deg, #ddd4ee 0%, #f0ecf8 100%); color: #6a4a8b; }
+.photo-placeholder.gold { background: linear-gradient(135deg, #f0ddb8 0%, #fdf3e3 100%); color: #8b6a2a; }
+
+/* SKILLS TAGS */
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.skill-tag {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--rose);
+  border-radius: 50px;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--rose-dark);
+}
+
+/* FOOTER */
+footer {
+  background: var(--text);
+  color: var(--pink);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  color: var(--pink);
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: var(--pink-mid);
+  text-decoration: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: white; }
+
+.footer-copy {
+  font-size: 0.72rem;
+  color: var(--text-soft);
+  margin-top: 0.5rem;
+}
+
+/* BACK BTN */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rose);
+  text-decoration: none;
+  margin: 6rem 3rem 0;
+  transition: gap 0.3s;
+}
+
+.back-btn:hover { gap: 0.8rem; }
+
+/* REVEAL ANIMATION */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  nav { padding: 1rem 1.5rem; }
+  .page-hero { padding: 8rem 1.5rem 3rem; }
+  .content-section, .photo-section { padding: 3rem 1.5rem; }
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .back-btn { margin: 5rem 1.5rem 0; }
+}

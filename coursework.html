@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coursework — Kaylie Chen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .course-area {
+      margin-bottom: 3rem;
+    }
+
+    .course-area-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .course-area-title em { font-style: italic; color: var(--rose); }
+
+    .course-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .course-list li {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      display: flex;
+      gap: 0.7rem;
+      align-items: baseline;
+      line-height: 1.6;
+    }
+
+    .course-list li::before {
+      content: "—";
+      color: var(--rose);
+      flex-shrink: 0;
+      font-size: 0.7rem;
+    }
+
+    .program-box {
+      background: linear-gradient(135deg, var(--pink) 0%, #faf0ec 100%);
+      border-radius: 24px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .program-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+    }
+
+    .program-box h3 em { font-style: italic; color: var(--rose); }
+
+    .program-box p {
+      font-size: 0.88rem;
+      color: var(--text-soft);
+      line-height: 1.7;
+    }
+
+    .program-details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .program-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .detail-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose);
+    }
+
+    .detail-value {
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .cert-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .cert-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .cert-name {
+      font-size: 0.88rem;
+      color: var(--text);
+      font-weight: 400;
+      margin-bottom: 0.2rem;
+    }
+
+    .cert-org {
+      font-size: 0.75rem;
+      color: var(--text-soft);
+    }
+
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .tool-card {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .tool-name {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .tool-category {
+      font-size: 0.72rem;
+      color: var(--text-soft);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 768px) {
+      .program-box { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Kaylie Chen</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+  <div class="page-hero">
+    <p class="page-tag">Academic · UBC</p>
+    <h1 class="page-title"><em>Coursework</em><br>& Education</h1>
+    <div class="divider"></div>
+    <p class="page-intro">
+      Biomedical Engineering at UBC with a mechanical specialization — a technically rigorous 
+      program bridging mechanical design, biomedical sciences, and engineering analysis. 
+      I'm also part of the UBC Applied Science Co-op Program.
+    </p>
+  </div>
+
+  <!-- PROGRAM INFO -->
+  <div class="content-section reveal">
+    <div class="program-box">
+      <div>
+        <h3>Bachelor of <em>Applied Science</em></h3>
+        <p>Biomedical Engineering (Mechanical Specialization) · University of British Columbia · September 2023 – Present</p>
+      </div>
+      <div class="program-details">
+        <div class="program-detail">
+          <span class="detail-label">Program</span>
+          <span class="detail-value">BASc Biomedical Engineering</span>
+        </div>
+        <div class="program-detail">
+          <span class="detail-label">Specialization</span>
+          <span class="detail-value">Mechanical</span>
+        </div>
+        <div class="program-detail">
+          <span class="detail-label">Co-op</span>
+          <span class="detail-value">UBC Applied Science Co-op Program</span>
+        </div>
+        <div class="program-detail">
+          <span class="detail-label">Location</span>
+          <span class="detail-value">Vancouver, British Columbia</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COURSE AREAS -->
+  <div class="content-section reveal">
+    <p class="section-label">Curriculum</p>
+    <h2 class="section-heading">Areas of <em>study</em></h2>
+    <p class="body-text">
+      The Biomedical Engineering program covers a broad technical foundation across mechanical 
+      engineering, biomedical sciences, electronics, and computation — with my mechanical 
+      specialization going deep on design, analysis, and materials.
+    </p>
+
+    <div class="course-area">
+      <h3 class="course-area-title">Mechanical Design & <em>Analysis</em></h3>
+      <ul class="course-list">
+        <li>Engineering Mechanics (Statics & Dynamics)</li>
+        <li>Mechanics of Materials</li>
+        <li>Fluid Mechanics</li>
+        <li>Machine Design & Manufacturing</li>
+        <li>Computer-Aided Design (SolidWorks, Fusion 360)</li>
+        <li>Finite Element Analysis (FEA)</li>
+      </ul>
+    </div>
+
+    <div class="course-area">
+      <h3 class="course-area-title">Biomedical <em>Sciences</em></h3>
+      <ul class="course-list">
+        <li>Biomechanics</li>
+        <li>Anatomy and Physiology for Engineers</li>
+        <li>Biopharmaceutical Manufacturing (CASTL Certified)</li>
+        <li>Medical Device Design and Regulation</li>
+        <li>Tissue Engineering (intro)</li>
+      </ul>
+    </div>
+
+    <div class="course-area">
+      <h3 class="course-area-title">Electrical & <em>Computation</em></h3>
+      <ul class="course-list">
+        <li>Circuit Analysis & Electronics (LTSpice)</li>
+        <li>Signals & Systems</li>
+        <li>Programming: Java, C, Python, R, MATLAB</li>
+        <li>Embedded Systems & Arduino</li>
+      </ul>
+    </div>
+
+    <div class="course-area">
+      <h3 class="course-area-title">Engineering <em>Practice</em></h3>
+      <ul class="course-list">
+        <li>Engineering Design & Communication</li>
+        <li>Technical Writing & Documentation</li>
+        <li>Materials Science</li>
+        <li>Engineering Ethics and Society</li>
+      </ul>
+    </div>
+
+    <p class="body-text" style="margin-top: 1rem; font-style: italic; color: var(--rose-dark);">
+      ✏️ Add your actual UBC courses here — feel free to list specific course codes and names!
+    </p>
+  </div>
+
+  <!-- TOOLS & SOFTWARE -->
+  <div class="content-section reveal">
+    <p class="section-label">Technical Skills</p>
+    <h2 class="section-heading">Tools & <em>Software</em></h2>
+    <div class="tools-grid">
+      <div class="tool-card"><div class="tool-name">SolidWorks</div><div class="tool-category">CAD</div></div>
+      <div class="tool-card"><div class="tool-name">Autodesk Fusion 360</div><div class="tool-category">CAD</div></div>
+      <div class="tool-card"><div class="tool-name">Onshape</div><div class="tool-category">CAD</div></div>
+      <div class="tool-card"><div class="tool-name">MATLAB</div><div class="tool-category">Computation</div></div>
+      <div class="tool-card"><div class="tool-name">Python</div><div class="tool-category">Programming</div></div>
+      <div class="tool-card"><div class="tool-name">Java / C</div><div class="tool-category">Programming</div></div>
+      <div class="tool-card"><div class="tool-name">LTSpice</div><div class="tool-category">Electronics</div></div>
+      <div class="tool-card"><div class="tool-name">Arduino</div><div class="tool-category">Embedded</div></div>
+      <div class="tool-card"><div class="tool-name">GitHub / Git</div><div class="tool-category">Version Control</div></div>
+      <div class="tool-card"><div class="tool-name">Figma</div><div class="tool-category">Design</div></div>
+      <div class="tool-card"><div class="tool-name">3D Printing (FDM)</div><div class="tool-category">Fabrication</div></div>
+      <div class="tool-card"><div class="tool-name">THT Soldering</div><div class="tool-category">Electronics</div></div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="content-section reveal">
+    <p class="section-label">Certifications</p>
+    <h2 class="section-heading">Credentials & <em>Training</em></h2>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-icon">🧪</div>
+        <div>
+          <div class="cert-name">Intro to Biopharmaceutical Manufacturing</div>
+          <div class="cert-org">CASTL</div>
+        </div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-icon">🏥</div>
+        <div>
+          <div class="cert-name">Standard First Aid & CPR</div>
+          <div class="cert-org">Canadian Red Cross</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <div class="footer-name">Kaylie Chen</div>
+    <div class="footer-links">
+      <a href="mailto:kayliec.jy@gmail.com">kayliec.jy@gmail.com</a>
+      <a href="tel:8255613328">(825) 561-3328</a>
+      <a href="https://www.linkedin.com/in/kayliecjy" target="_blank">LinkedIn</a>
+      <span style="color: var(--text-soft)">Vancouver, BC</span>
+    </div>
+    <p class="footer-copy">© 2026 Kaylie Chen · Biomedical Engineering, UBC</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

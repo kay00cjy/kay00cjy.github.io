@@ -1,129 +1,674 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title> Welcome to Me! </title>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,
-            wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-        <style>
-            body { /* main text */
-                font-family: 'Ubuntu', sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                font-size: 28px;
-                margin: 40px;
-                padding: 0 24px;
-                background-color: #f5e1e1;
-                color: #351a1a;
-            }
-            h1 { /* main page title*/
-                margin-top: 50px;
-                margin-bottom: 50px;
-                font-weight: 800;
-                font-style: italic;
-                font-variant: small-caps;
-                font-size: 180px;
-            }
-            h2 { /* section titles */
-                margin-top: 30px;
-                margin-bottom: 30px;
-                font-weight: 600;
-                font-style: normal;
-                font-variant: small-caps;
-                font-size: 60px;
-            }
-            h3 { /* navigation titles */
-                margin-top: 10px;
-                margin-bottom: 20px;
-                font-weight: 500;
-                font-style: italic;
-                font-variant: small-caps;
-                font-stretch: expanded;
-                font-size: 40px;
-            }
-            h4 { /* subtitles & comments */
-                margin-top: 10px;
-                margin-bottom: 10px;
-                font-weight: 300;
-                font-style: italic;
-                font-size: 40px;
-            }
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kaylie Chen — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fdf8f5;
+      --pink: #f2d4cc;
+      --pink-mid: #e8b8ac;
+      --rose: #c4776a;
+      --rose-dark: #8b4a40;
+      --text: #2c1f1a;
+      --text-soft: #6b4f48;
+      --cream: #faf3ee;
+      --border: rgba(196, 119, 106, 0.2);
+    }
 
-            .mainIntro {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                padding: 80px 40px;
-                border-radius: 25px;
-                background-color: #794646;
-                color: #f4f4f4;
-                margin-bottom: 40px;
-            }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-            .about {
-                display: flex;
-                padding: 40px;
-                gap: 40px;
-                align-items: flex-start;
-                margin-bottom: 40px;
-                min-height: 500px;
-            }
+    html { scroll-behavior: smooth; }
 
-            .aboutText {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
 
-            .aboutImage {
-                flex: 1;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 12px;
-            }
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.4rem 3rem;
+      background: rgba(253, 248, 245, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
 
-            .aboutImage img {
-                width: 100%;
-                height: auto;
-                border-radius: 12px;
-                object-fit: contain;
-            }
-            
-        </style>
-    </head>
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--rose-dark);
+      text-decoration: none;
+    }
 
-    <script>
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
 
-            function connectLinkedin () {
-                window.open('https://www.linkedin.com/in/kayliecjy/', '_blank');
-            }
-    </script>
+    .nav-links a {
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-    <body>
-        <div class = "mainIntro">
-            <h2> Hey, </h2>
-            <h1>       I'm Kaylie </h1>
-            <h4> welcome to a digital slice of my life! </h4>
+    .nav-links a:hover { color: var(--rose); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 3rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-blob {
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 55vw;
+      height: 55vw;
+      max-width: 700px;
+      max-height: 700px;
+      background: radial-gradient(ellipse at 60% 40%, #f2d4cc 0%, #fdf0eb 50%, transparent 75%);
+      border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+      animation: blobFloat 8s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    .hero-bg-blob2 {
+      position: absolute;
+      bottom: 5%;
+      left: -8%;
+      width: 35vw;
+      height: 35vw;
+      max-width: 400px;
+      max-height: 400px;
+      background: radial-gradient(ellipse, #f9e8e3 0%, transparent 70%);
+      border-radius: 40% 60% 30% 70% / 60% 40% 60% 40%;
+      animation: blobFloat 11s ease-in-out infinite reverse;
+      z-index: 0;
+    }
+
+    @keyframes blobFloat {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(15px, -20px) rotate(3deg); }
+      66% { transform: translate(-10px, 10px) rotate(-2deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 750px;
+    }
+
+    .hero-tag {
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.4s forwards;
+    }
+
+    .hero-name em {
+      font-style: italic;
+      color: var(--rose);
+    }
+
+    .hero-subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-soft);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.6s forwards;
+    }
+
+    .hero-desc {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--text-soft);
+      max-width: 520px;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.8s forwards;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 0.85rem 2.5rem;
+      border: 1.5px solid var(--rose);
+      color: var(--rose-dark);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-radius: 50px;
+      transition: all 0.3s;
+      opacity: 0;
+      animation: fadeUp 0.9s 1s forwards;
+    }
+
+    .hero-cta:hover {
+      background: var(--rose);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-soft);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeUp 1s 1.4s forwards;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--rose), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.4; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ABOUT SECTION */
+    .about {
+      padding: 7rem 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-visual {
+      position: relative;
+    }
+
+    .about-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--pink) 0%, #f9dfd8 100%);
+      border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--rose);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-style: italic;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .about-dot {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: var(--rose);
+      border-radius: 50%;
+    }
+
+    .about-dot:nth-child(1) { top: 10%; right: -5%; }
+    .about-dot:nth-child(2) { bottom: 20%; left: -3%; width: 8px; height: 8px; background: var(--pink-mid); }
+    .about-dot:nth-child(3) { top: 40%; right: -8%; width: 6px; height: 6px; background: var(--pink-mid); }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .section-title em { font-style: italic; color: var(--rose); }
+
+    .about-text {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--text-soft);
+      margin-bottom: 1rem;
+    }
+
+    .about-btn {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      background: var(--rose);
+      color: white;
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+
+    .about-btn:hover {
+      background: var(--rose-dark);
+      transform: translateY(-2px);
+    }
+
+    /* SKILLS BAR */
+    .skills-strip {
+      background: var(--pink);
+      padding: 1.5rem 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .skills-track {
+      display: flex;
+      gap: 3rem;
+      animation: scrollLeft 25s linear infinite;
+      white-space: nowrap;
+    }
+
+    .skill-pill {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--rose-dark);
+      padding: 0.4rem 1.2rem;
+      border: 1px solid var(--rose-dark);
+      border-radius: 50px;
+      flex-shrink: 0;
+    }
+
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* PROJECTS SECTION */
+    .projects {
+      padding: 7rem 3rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .projects-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+      border: 1px solid var(--border);
+    }
+
+    .project-card:hover { transform: translateY(-6px); }
+
+    .project-card-inner {
+      padding: 2.5rem;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .card-bionics { background: linear-gradient(135deg, #f9ede9 0%, #f2d4cc 100%); }
+    .card-igem { background: linear-gradient(135deg, #edf4f0 0%, #d4e8dd 100%); }
+    .card-work { background: linear-gradient(135deg, #f0ecf8 0%, #ddd4ee 100%); }
+    .card-courses { background: linear-gradient(135deg, #fdf3e3 0%, #f0ddb8 100%); }
+
+    .card-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem;
+      font-weight: 300;
+      opacity: 0.15;
+      line-height: 1;
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+    }
+
+    .card-tag {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.5rem;
+    }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.2;
+    }
+
+    .card-desc {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+      margin-top: 0.8rem;
+    }
+
+    .card-arrow {
+      font-size: 1.4rem;
+      color: var(--rose);
+      margin-top: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover .card-arrow { transform: translateX(4px); }
+
+    /* CONTACT FOOTER */
+    footer {
+      background: var(--text);
+      color: var(--pink);
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--pink);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .footer-links a {
+      color: var(--pink-mid);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover { color: white; }
+
+    .footer-copy {
+      font-size: 0.72rem;
+      color: var(--text-soft);
+      margin-top: 0.5rem;
+    }
+
+    /* FADE IN on scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero { padding: 7rem 1.5rem 4rem; }
+      .about { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
+      .project-grid { grid-template-columns: 1fr; }
+      .projects { padding: 4rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Kaylie Chen</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-blob"></div>
+    <div class="hero-bg-blob2"></div>
+    <div class="hero-content">
+      <p class="hero-tag">Biomedical Engineering · UBC · Vancouver</p>
+      <h1 class="hero-name">Kaylie<br><em>Chen</em></h1>
+      <p class="hero-subtitle">Building things that matter, one iteration at a time.</p>
+      <p class="hero-desc">
+        I'm a Biomedical Engineering student at UBC with a mechanical specialization — designing devices, 
+        leading teams, and endlessly prototyping. From prosthetic arms to cardiac mapping, I care about 
+        engineering that improves lives.
+      </p>
+      <a href="#about" class="hero-cta">Explore My Work</a>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-visual reveal">
+      <div class="about-photo-placeholder">
+        <div class="about-dot"></div>
+        <div class="about-dot"></div>
+        <div class="about-dot"></div>
+        <span>Add your photo here ✦</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="section-label">About Me</p>
+      <h2 class="section-title">Engineer. <em>Maker.</em><br>Problem-solver.</h2>
+      <p class="about-text">
+        I chose Biomedical Engineering because I wanted to combine hands-on design with 
+        meaningful impact. Growing up building things with my hands and volunteering at 
+        the Alberta Children's Hospital showed me how technology can transform lives — 
+        and I've been chasing that intersection ever since.
+      </p>
+      <p class="about-text">
+        Currently interning at TruMotion Technologies, I work on mechanical systems for 
+        rehabilitation devices. Outside of work, I lead teams, design prosthetics, build 
+        bioreactors, and occasionally burn through filament on prototypes that almost work.
+      </p>
+      <a href="about.html" class="about-btn">More About Me →</a>
+    </div>
+  </section>
+
+  <!-- SKILLS STRIP -->
+  <div class="skills-strip">
+    <div class="skills-track">
+      <span class="skill-pill">SolidWorks</span>
+      <span class="skill-pill">Fusion 360</span>
+      <span class="skill-pill">FEA</span>
+      <span class="skill-pill">3D Printing</span>
+      <span class="skill-pill">CAD Design</span>
+      <span class="skill-pill">Prototyping</span>
+      <span class="skill-pill">Onshape</span>
+      <span class="skill-pill">MATLAB</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">Arduino</span>
+      <span class="skill-pill">Machining</span>
+      <span class="skill-pill">THT Soldering</span>
+      <span class="skill-pill">GLP</span>
+      <span class="skill-pill">DBTL Cycles</span>
+      <span class="skill-pill">Team Leadership</span>
+      <!-- duplicate for seamless loop -->
+      <span class="skill-pill">SolidWorks</span>
+      <span class="skill-pill">Fusion 360</span>
+      <span class="skill-pill">FEA</span>
+      <span class="skill-pill">3D Printing</span>
+      <span class="skill-pill">CAD Design</span>
+      <span class="skill-pill">Prototyping</span>
+      <span class="skill-pill">Onshape</span>
+      <span class="skill-pill">MATLAB</span>
+      <span class="skill-pill">Python</span>
+      <span class="skill-pill">Arduino</span>
+      <span class="skill-pill">Machining</span>
+      <span class="skill-pill">THT Soldering</span>
+      <span class="skill-pill">GLP</span>
+      <span class="skill-pill">DBTL Cycles</span>
+      <span class="skill-pill">Team Leadership</span>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="projects-header reveal">
+      <p class="section-label">Selected Work</p>
+      <h2 class="section-title">What I've been <em>building</em></h2>
+    </div>
+
+    <div class="project-grid">
+      <a href="bionics.html" class="project-card reveal">
+        <div class="project-card-inner card-bionics">
+          <div class="card-number">01</div>
+          <div>
+            <p class="card-tag">Design Team · Mechanical Lead</p>
+            <h3 class="card-title">UBC Bionic Hand</h3>
+            <p class="card-desc">Leading the 3rd iteration of a body-powered prosthetic arm — gear-based wrist rotation, finger actuation, and cross-team integration.</p>
+          </div>
+          <div class="card-arrow">→</div>
         </div>
+      </a>
 
-        <div class = "about">
-            <div class = "aboutText">
-                <h2> About Me </h2>
-                <p> Hello! My name is Kaylie Chen and I'm in my third year of biomedical engineering at the University of British Columbia.
-                     I'm currently working on my skills in biomechanics, systems and signals, and programming, hoping to be able to bridge the 
-                     gap between engineering and the medical field. In my free time, I like to play around with frontend design and explore 
-                     different mediums of art. I created this website to better showcase my projects as a portfolio, but to also introduce myself
-                     in more raw and genuine version of who I am. I'm always looking for new opportunites to learn and grow, so feel free to reach out! 
-                </p>
-            </div>
-
-            <div class = "aboutImage">
-                <img src="icon.png" width="400" height="300" style="border-radius: 12px;">
-            </div>
+      <a href="igem.html" class="project-card reveal">
+        <div class="project-card-inner card-igem">
+          <div class="card-number">02</div>
+          <div>
+            <p class="card-tag">Design Team · Hardware</p>
+            <h3 class="card-title">UBC iGEM</h3>
+            <p class="card-desc">Gold Medal — designing and iterating bioreactors for cyanobacteria cultivation through DBTL cycles and aseptic testing protocols.</p>
+          </div>
+          <div class="card-arrow">→</div>
         </div>
+      </a>
 
-    </body>
+      <a href="work.html" class="project-card reveal">
+        <div class="project-card-inner card-work">
+          <div class="card-number">03</div>
+          <div>
+            <p class="card-tag">Internships</p>
+            <h3 class="card-title">Work Experience</h3>
+            <p class="card-desc">Mechanical Engineering Intern at TruMotion & Sentact Technologies — FEA, CAD, rehabilitation devices, and carbon fibre mould workflows.</p>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+      </a>
 
+      <a href="coursework.html" class="project-card reveal">
+        <div class="project-card-inner card-courses">
+          <div class="card-number">04</div>
+          <div>
+            <p class="card-tag">Academic</p>
+            <h3 class="card-title">Coursework</h3>
+            <p class="card-desc">Biomedical Engineering with a mechanical specialization — from biomechanics to circuits, signal processing, and materials science.</p>
+          </div>
+          <div class="card-arrow">→</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-name">Kaylie Chen</div>
+    <div class="footer-links">
+      <a href="mailto:kayliec.jy@gmail.com">kayliec.jy@gmail.com</a>
+      <a href="tel:8255613328">(825) 561-3328</a>
+      <a href="https://www.linkedin.com/in/kayliecjy" target="_blank">LinkedIn</a>
+      <span style="color: var(--text-soft)">Vancouver, BC</span>
+    </div>
+    <p class="footer-copy">© 2026 Kaylie Chen · Biomedical Engineering, UBC</p>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
 </html>

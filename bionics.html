@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UBC Bionic Hand — Kaylie Chen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .hero-accent {
+      display: inline-block;
+      background: var(--pink);
+      padding: 0.2rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: var(--rose-dark);
+      margin-bottom: 1.2rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin-top: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--rose), var(--pink));
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      padding-left: 1rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.6rem;
+      top: 0.4rem;
+      width: 10px;
+      height: 10px;
+      background: var(--rose);
+      border-radius: 50%;
+      border: 2px solid var(--bg);
+    }
+
+    .timeline-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .timeline-desc {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, var(--pink) 0%, #f9e0d8 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .highlight-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .highlight-box ul li {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      display: flex;
+      gap: 0.6rem;
+      line-height: 1.6;
+    }
+
+    .highlight-box ul li::before {
+      content: "✦";
+      color: var(--rose);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Kaylie Chen</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+  <div class="page-hero">
+    <span class="hero-accent">Design Team · Mechanical Sub-Team Lead</span>
+    <h1 class="page-title">UBC <em>Bionic Hand</em></h1>
+    <div class="divider"></div>
+    <p class="page-intro">
+      Leading the mechanical redesign of UBC Bionic's 3rd iteration prosthetic arm — 
+      a fully mechanical, body-powered prosthetic with gear-based wrist rotation, 
+      finger actuation, and systems-level integration with the electrical team.
+    </p>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="content-section reveal">
+    <p class="section-label">Overview</p>
+    <h2 class="section-heading">The <em>project</em></h2>
+    <p class="body-text">
+      UBC Bionic Hand is a student design team working to develop low-cost, functional prosthetic 
+      limbs. As Mechanical Sub-Team Lead since September 2024, I oversee a 6-member team in the 
+      design, prototyping, and manufacturing of the arm's third iteration — focused on improving 
+      functionality, reliability, and manufacturability compared to previous versions.
+    </p>
+    <p class="body-text">
+      The arm is body-powered and fully mechanical, meaning no motors — actuation is achieved 
+      through harness tension and compliant linkage design. This places a premium on smart 
+      mechanical design that balances biomechanical accuracy with structural durability.
+    </p>
+
+    <div class="skills-row">
+      <span class="skill-tag">SolidWorks</span>
+      <span class="skill-tag">3D Printing (FDM)</span>
+      <span class="skill-tag">Tolerance Analysis</span>
+      <span class="skill-tag">Gear Design</span>
+      <span class="skill-tag">Machining</span>
+      <span class="skill-tag">Systems Integration</span>
+      <span class="skill-tag">Team Leadership</span>
+    </div>
+  </div>
+
+  <!-- GOALS & ACHIEVEMENTS -->
+  <div class="content-section reveal">
+    <p class="section-label">Goals & Achievements</p>
+    <h2 class="section-heading">What I <em>set out to do</em> — and did</h2>
+
+    <div class="highlight-box">
+      <h3>Key Accomplishments ✦</h3>
+      <ul>
+        <li>Completed the 3rd iteration of the prosthetic arm <strong>ahead of schedule</strong> with full functionality and high-quality subsystem integration</li>
+        <li>Led a 6-member mechanical sub-team, defining design objectives, establishing the mechanical design framework, and managing project timelines</li>
+        <li>Designed and optimized PCB and battery enclosures in SolidWorks with sealed geometry for splash resistance and reliable connector access</li>
+        <li>Researched and prototyped a <strong>gear-based wrist rotation mechanism</strong> using bevel gears and compliant linkages for controlled, natural-feeling actuation</li>
+        <li>Performed gear torque analysis and load analysis to verify gear strength under applied wrist loads — ensuring structural reliability and adaptability for future motorized upgrades</li>
+        <li>Coordinated cross-functional integration with the electrical sub-team for smooth systems-level performance</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="content-section reveal">
+    <p class="section-label">Process</p>
+    <h2 class="section-heading">Design <em>journey</em></h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 1 · Requirements</p>
+        <h4 class="timeline-title">Defining the Design Framework</h4>
+        <p class="timeline-desc">Established design objectives and requirements in collaboration with the full team. Set mechanical performance targets around range of motion, load capacity, and assembly reproducibility.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 2 · Concept Design</p>
+        <h4 class="timeline-title">Wrist Mechanism Research & Prototyping</h4>
+        <p class="timeline-desc">Researched bevel gear configurations and compliant linkage systems. Created early CAD concepts in SolidWorks and ran initial torque analysis to evaluate feasibility.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 3 · Iteration</p>
+        <h4 class="timeline-title">FDM Prototyping & Testing</h4>
+        <p class="timeline-desc">Iterated through multiple 3D-printed prototypes with each cycle improving dimensional accuracy, fit, and mechanical performance. Applied tolerance analysis to all critical interfaces.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 4 · Integration</p>
+        <h4 class="timeline-title">Cross-Functional Systems Integration</h4>
+        <p class="timeline-desc">Worked with the electrical sub-team to ensure mechanical and electronic subsystems interfaced correctly. Finalized enclosure geometry for PCB, battery, and connector access.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 5 · Delivery</p>
+        <h4 class="timeline-title">Completed Arm — Ahead of Schedule</h4>
+        <p class="timeline-desc">Delivered a fully functional 3rd iteration prosthetic arm with verified performance across all mechanical subsystems.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="photo-section reveal">
+    <p class="section-label">Gallery</p>
+    <h2 class="section-heading">Photos & <em>Process</em></h2>
+    <p class="body-text" style="margin-bottom: 0.5rem;">Replace the placeholders below with your own photos — CAD screenshots, printed prototypes, team shots, testing, anything that tells the story.</p>
+    <div class="photo-grid">
+      <div class="photo-placeholder">
+        <span class="plus">+</span>
+        <span>Add photo: Full arm assembly</span>
+      </div>
+      <div class="photo-placeholder">
+        <span class="plus">+</span>
+        <span>Add photo: Wrist mechanism detail</span>
+      </div>
+      <div class="photo-placeholder">
+        <span class="plus">+</span>
+        <span>Add photo: CAD render</span>
+      </div>
+      <div class="photo-placeholder">
+        <span class="plus">+</span>
+        <span>Add photo: Prototype iteration</span>
+      </div>
+      <div class="photo-placeholder">
+        <span class="plus">+</span>
+        <span>Add photo: Gear mechanism</span>
+      </div>
+      <div class="photo-placeholder">
+        <span class="plus">+</span>
+        <span>Add photo: Team / testing</span>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <div class="footer-name">Kaylie Chen</div>
+    <div class="footer-links">
+      <a href="mailto:kayliec.jy@gmail.com">kayliec.jy@gmail.com</a>
+      <a href="tel:8255613328">(825) 561-3328</a>
+      <a href="https://www.linkedin.com/in/kayliecjy" target="_blank">LinkedIn</a>
+      <span style="color: var(--text-soft)">Vancouver, BC</span>
+    </div>
+    <p class="footer-copy">© 2026 Kaylie Chen · Biomedical Engineering, UBC</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Kaylie Chen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+      padding: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-photo-wrap {
+      position: relative;
+    }
+
+    .about-photo-main {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, var(--pink) 0%, #f9dfd8 60%, #f2c8be 100%);
+      border-radius: 40% 60% 50% 50% / 40% 40% 60% 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--rose);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .fun-fact-strip {
+      background: var(--pink);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .fun-fact-strip h4 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--rose-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .fun-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .fun-list li {
+      font-size: 0.85rem;
+      color: var(--text-soft);
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .fun-list li::before {
+      content: "✦";
+      color: var(--rose);
+      flex-shrink: 0;
+    }
+
+    .values-section {
+      padding: 3rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .value-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .value-emoji {
+      font-size: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .value-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .value-desc {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    .placeholder-note {
+      background: var(--pink);
+      border-left: 3px solid var(--rose);
+      padding: 1rem 1.5rem;
+      border-radius: 0 12px 12px 0;
+      font-size: 0.85rem;
+      color: var(--rose-dark);
+      font-style: italic;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; padding: 1.5rem; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Kaylie Chen</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+  <div class="page-hero">
+    <p class="page-tag">Personal · About Me</p>
+    <h1 class="page-title">More than an<br><em>engineer.</em></h1>
+    <div class="divider"></div>
+    <p class="page-intro">
+      Here's a little more of who I am — beyond the resume. I believe the best engineers 
+      bring their full selves to their work: curiosity, creativity, and care.
+    </p>
+  </div>
+
+  <div class="about-grid">
+    <div class="reveal">
+      <div class="about-photo-main">
+        Add a photo of yourself here ✦
+      </div>
+      <div class="fun-fact-strip">
+        <h4>A few things about me —</h4>
+        <ul class="fun-list">
+          <li>I grew up building with popsicle sticks and LEGO before CAD was a thing</li>
+          <li>Volunteering at the Alberta Children's Hospital is what pointed me toward biomedical engineering</li>
+          <li>I can 3D print overnight and wake up excited to check the results</li>
+          <li>I think good design is equal parts function and feeling</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <p class="section-label">My Story</p>
+      <h2 class="section-heading">How I got <em>here</em></h2>
+
+      <div class="placeholder-note">
+        ✏️ Fill in your own story below! The text here is a starting draft based on your resume and cover letter — make it yours.
+      </div>
+
+      <p class="body-text">
+        I've always been a builder. As a kid, it was popsicle sticks and straws — seeing how much 
+        weight a bridge could hold before it gave way. That same curiosity carries into everything 
+        I do today, just with better materials and slightly higher stakes.
+      </p>
+      <p class="body-text">
+        Volunteering at the Alberta Children's Hospital opened my eyes to the real-world impact 
+        of medical technology — not just on patients, but on families and the clinicians who care 
+        for them. That experience made my path feel obvious: I wanted to be on the side building 
+        those tools.
+      </p>
+      <p class="body-text">
+        [Add more about yourself here — your personality, hobbies, what drives you outside of 
+        engineering, what you're looking for in your career, what makes you, you. ✨]
+      </p>
+
+      <p class="section-label" style="margin-top: 2.5rem">Outside the Lab</p>
+      <p class="body-text">
+        [Tell the reader something fun — do you hike? Paint? Cook? Have a playlist for every 
+        mood? This is where your personality shines through.]
+      </p>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <div class="values-section reveal">
+    <p class="section-label">What I Bring</p>
+    <h2 class="section-heading">My <em>values</em> as an engineer</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-emoji">🔁</div>
+        <div class="value-name">Iteration</div>
+        <p class="value-desc">Nothing is done on the first try — and that's the point. I embrace the DBTL cycle in everything.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-emoji">🔬</div>
+        <div class="value-name">Precision</div>
+        <p class="value-desc">Details matter. From tolerance analysis to documentation, I care about doing things right.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-emoji">🤝</div>
+        <div class="value-name">Collaboration</div>
+        <p class="value-desc">Good design is a team effort. I lead with curiosity and make space for everyone's input.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <div class="footer-name">Kaylie Chen</div>
+    <div class="footer-links">
+      <a href="mailto:kayliec.jy@gmail.com">kayliec.jy@gmail.com</a>
+      <a href="tel:8255613328">(825) 561-3328</a>
+      <a href="https://www.linkedin.com/in/kayliecjy" target="_blank">LinkedIn</a>
+      <span style="color: var(--text-soft)">Vancouver, BC</span>
+    </div>
+    <p class="footer-copy">© 2026 Kaylie Chen · Biomedical Engineering, UBC</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

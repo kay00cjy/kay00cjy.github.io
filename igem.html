@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UBC iGEM — Kaylie Chen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    .hero-accent {
+      display: inline-block;
+      background: #d4e8dd;
+      padding: 0.2rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: #3a7a56;
+      margin-bottom: 1.2rem;
+    }
+
+    .gold-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #f0ddb8, #f9ecd4);
+      border: 1px solid #c9a84c;
+      border-radius: 50px;
+      padding: 0.6rem 1.4rem;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #7a5a1a;
+      margin: 1.5rem 0;
+    }
+
+    .dbtl-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .dbtl-card {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-radius: 16px;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .dbtl-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: #7aad8f;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .dbtl-word {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.5rem;
+    }
+
+    .dbtl-desc {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #d4e8dd 0%, #edf4f0 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .highlight-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .highlight-box ul li {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      display: flex;
+      gap: 0.6rem;
+      line-height: 1.6;
+    }
+
+    .highlight-box ul li::before {
+      content: "✦";
+      color: #3a7a56;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .skill-tag.green {
+      border-color: #7aad8f;
+      color: #3a7a56;
+    }
+
+    @media (max-width: 768px) {
+      .dbtl-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Kaylie Chen</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <a href="index.html" class="back-btn">← Back to Home</a>
+
+  <div class="page-hero">
+    <span class="hero-accent">Design Team · Dry Lab Hardware</span>
+    <h1 class="page-title">UBC <em>iGEM</em></h1>
+    <div class="divider"></div>
+    <p class="page-intro">
+      International Genetically Engineered Machine — Gold Medal at the iGEM Grand Jamboree 
+      competing against 400+ teams globally. I designed and iterated bioreactor systems for 
+      cyanobacteria and Caulobacter cultivation using DBTL cycles and aseptic testing protocols.
+    </p>
+    <div class="gold-badge">
+      🥇 Gold Medal — iGEM Grand Jamboree · 400+ Teams
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="content-section reveal">
+    <p class="section-label">Overview</p>
+    <h2 class="section-heading">The <em>project</em></h2>
+    <p class="body-text">
+      UBC iGEM is UBC's team for the International Genetically Engineered Machine competition — 
+      a global synthetic biology challenge. As a Dry Lab Hardware member since January 2025, 
+      I work on the physical systems that enable our biological experiments: bioreactors designed 
+      to cultivate cyanobacteria under controlled conditions for research into sustainable 
+      bioprocesses.
+    </p>
+    <p class="body-text">
+      My work spans mechanical design, circuit assembly, and experimental testing — bridging 
+      hardware engineering with biological requirements. The team competed at the iGEM Grand 
+      Jamboree, where we secured a Gold Medal among 400+ competing teams.
+    </p>
+
+    <div class="skills-row">
+      <span class="skill-tag green">CAD (Fusion 360)</span>
+      <span class="skill-tag green">FDM 3D Printing</span>
+      <span class="skill-tag green">THT Soldering</span>
+      <span class="skill-tag green">Aseptic Technique</span>
+      <span class="skill-tag green">GLP</span>
+      <span class="skill-tag green">Fluid Dynamics</span>
+      <span class="skill-tag green">Arduino</span>
+      <span class="skill-tag green">DBTL</span>
+    </div>
+  </div>
+
+  <!-- DBTL CYCLE -->
+  <div class="content-section reveal">
+    <p class="section-label">Methodology</p>
+    <h2 class="section-heading">Working through the <em>DBTL cycle</em></h2>
+    <p class="body-text">
+      Each iteration of our bioreactor was driven by a structured design–build–test–learn 
+      cycle. This structured approach let us integrate academic feedback, computational fluid 
+      dynamics analysis, and hands-on experimental results into each successive version.
+    </p>
+    <div class="dbtl-grid">
+      <div class="dbtl-card">
+        <div class="dbtl-letter">D</div>
+        <div class="dbtl-word">Design</div>
+        <p class="dbtl-desc">Literature reviews, CAD modeling, and performance metric definition based on cell culture requirements.</p>
+      </div>
+      <div class="dbtl-card">
+        <div class="dbtl-letter">B</div>
+        <div class="dbtl-word">Build</div>
+        <p class="dbtl-desc">Rapid prototyping with FDM printing, drilling, woodworking, and circuit assembly with THT soldering.</p>
+      </div>
+      <div class="dbtl-card">
+        <div class="dbtl-letter">T</div>
+        <div class="dbtl-word">Test</div>
+        <p class="dbtl-desc">Bacterial growth curve experiments under aseptic conditions. Structured protocols, quantitative evaluation.</p>
+      </div>
+      <div class="dbtl-card">
+        <div class="dbtl-letter">L</div>
+        <div class="dbtl-word">Learn</div>
+        <p class="dbtl-desc">Integrate results and feedback into the next version — improving modularity, fluid dynamics, and lighting.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="content-section reveal">
+    <p class="section-label">Goals & Achievements</p>
+    <h2 class="section-heading">What we <em>built and achieved</em></h2>
+
+    <div class="highlight-box">
+      <h3>Key Contributions ✦</h3>
+      <ul>
+        <li>Designed bioreactors optimized for aeration, agitation, and lighting based on literature reviews and performance metrics — using CAD and rapid prototyping</li>
+        <li>Iterated through multiple bioreactor designs using a DBTL cycle, integrating academic feedback, computational analysis, and user testing to improve fluid dynamics and lighting uniformity</li>
+        <li>Cultured Cyanobacteria and Caulobacter under aseptic conditions, applying Good Laboratory Practice (GLP) techniques throughout</li>
+        <li>Developed an end-to-end structured testing protocol for bacterial growth curve experiments — establishing quantitative benchmarks for evaluation</li>
+        <li>Assembled circuitry for a low-gravity bioreactor using THT soldering, integrating rotary slip rings for reliable two-axis rotation with continuous electrical connectivity</li>
+        <li>Competed at the iGEM Grand Jamboree against 400+ global teams — <strong>secured a Gold Medal</strong></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="photo-section reveal">
+    <p class="section-label">Gallery</p>
+    <h2 class="section-heading">Photos & <em>Process</em></h2>
+    <p class="body-text" style="margin-bottom: 0.5rem;">Add your own photos here — bioreactor builds, lab experiments, Jamboree, team moments.</p>
+    <div class="photo-grid">
+      <div class="photo-placeholder green">
+        <span class="plus">+</span>
+        <span>Add photo: Bioreactor assembly</span>
+      </div>
+      <div class="photo-placeholder green">
+        <span class="plus">+</span>
+        <span>Add photo: CAD / render</span>
+      </div>
+      <div class="photo-placeholder green">
+        <span class="plus">+</span>
+        <span>Add photo: Lab testing</span>
+      </div>
+      <div class="photo-placeholder green">
+        <span class="plus">+</span>
+        <span>Add photo: iGEM Jamboree</span>
+      </div>
+      <div class="photo-placeholder green">
+        <span class="plus">+</span>
+        <span>Add photo: Circuit / soldering</span>
+      </div>
+      <div class="photo-placeholder green">
+        <span class="plus">+</span>
+        <span>Add photo: Team / Gold Medal</span>
+      </div>
+    </div>
+  </div>
+
+  <footer id="contact">
+    <div class="footer-name">Kaylie Chen</div>
+    <div class="footer-links">
+      <a href="mailto:kayliec.jy@gmail.com">kayliec.jy@gmail.com</a>
+      <a href="tel:8255613328">(825) 561-3328</a>
+      <a href="https://www.linkedin.com/in/kayliecjy" target="_blank">LinkedIn</a>
+      <span style="color: var(--text-soft)">Vancouver, BC</span>
+    </div>
+    <p class="footer-copy">© 2026 Kaylie Chen · Biomedical Engineering, UBC</p>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
