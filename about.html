@@ -129,17 +129,11 @@
       .values-grid { grid-template-columns: 1fr; }
     }
   </style>
+  <link rel="icon" href="icon.png">
 </head>
 <body>
 
-  <nav>
-    <a class="nav-logo" href="index.html">Kaylie Chen</a>
-    <ul class="nav-links">
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#projects">Work</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <nav aria-label="Main navigation"><a class="nav-logo" href="index.html">Kaylie Chen</a><ul class="nav-links"><li><a href="index.html#about">About</a></li><li><a href="index.html#projects">Work</a></li><li><a href="index.html#design-teams">Design Teams</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="assets/Kaylie-Chen-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a></li></ul></nav>
 
   <a href="index.html" class="back-btn">← Back to Home</a>
 
@@ -155,17 +149,10 @@
 
   <div class="about-grid">
     <div class="reveal">
-      <div class="about-photo-main">
-        Add a photo of yourself here ✦
-      </div>
+      <img class="portrait" src="assets/kaylie-chen.jpg" alt="Kaylie Chen in a fabrication lab" width="1600" height="1067">
       <div class="fun-fact-strip">
         <h4>A few things about me —</h4>
-        <ul class="fun-list">
-          <li>I grew up building with popsicle sticks and LEGO before CAD was a thing</li>
-          <li>Volunteering at the Alberta Children's Hospital is what pointed me toward biomedical engineering</li>
-          <li>I can 3D print overnight and wake up excited to check the results</li>
-          <li>I think good design is equal parts function and feeling</li>
-        </ul>
+        <ul class="fun-list"><li>Music was my first creative outlet — I grew up wanting to be a pianist.</li><li>Performing at Alberta Children’s Hospital helped draw me toward biomedical engineering.</li><li>I’m learning electric guitar outside of engineering.</li></ul>
       </div>
     </div>
 
@@ -173,31 +160,13 @@
       <p class="section-label">My Story</p>
       <h2 class="section-heading">How I got <em>here</em></h2>
 
-      <div class="placeholder-note">
-        ✏️ Fill in your own story below! The text here is a starting draft based on your resume and cover letter — make it yours.
-      </div>
-
-      <p class="body-text">
-        I've always been a builder. As a kid, it was popsicle sticks and straws — seeing how much 
-        weight a bridge could hold before it gave way. That same curiosity carries into everything 
-        I do today, just with better materials and slightly higher stakes.
-      </p>
-      <p class="body-text">
-        Volunteering at the Alberta Children's Hospital opened my eyes to the real-world impact 
-        of medical technology — not just on patients, but on families and the clinicians who care 
-        for them. That experience made my path feel obvious: I wanted to be on the side building 
-        those tools.
-      </p>
-      <p class="body-text">
-        [Add more about yourself here — your personality, hobbies, what drives you outside of 
-        engineering, what you're looking for in your career, what makes you, you. ✨]
-      </p>
-
-      <p class="section-label" style="margin-top: 2.5rem">Outside the Lab</p>
-      <p class="body-text">
-        [Tell the reader something fun — do you hike? Paint? Cook? Have a playlist for every 
-        mood? This is where your personality shines through.]
-      </p>
+      <p class="body-text">I first found a love of creating through music. As a young pianist, I enjoyed taking fundamental building blocks and making something that felt my own. Performing for patients and families at Alberta Children’s Hospital showed me that what I created could also make a difference to someone else.</p>
+      <p class="body-text">That experience helped lead me to Biomedical Engineering at UBC, where I’m completing a Bachelor of Applied Science with a mechanical specialization and participating in the Applied Science Co-op Program. I’m drawn to medical devices that interact directly with the human body, especially in rehabilitation and mobility.</p>
+      <p class="body-text">My internships have taken me from FEA and rehabilitation-device design at TruMotion, to manufacturing tooling and automation at Sentact, to mechanical testing at Kardium. Each has added another perspective on how a design becomes a useful, reliable product.</p>
+      <p class="body-text">As Mechanical Sub-Team Lead at UBC Bionic Hand, I also work with a seven-member team to turn requirements into a prosthetic arm. Leading design reviews and coordinating across mechanical, electrical, and controls teams has taught me to consider the effect of each change on the whole system — and on the person who will use it.</p>
+      <p class="section-label" style="margin-top:2rem">Outside the Lab</p>
+      <p class="body-text">Music is still part of my life, and I’m learning electric guitar. I like that both music and engineering give me room to experiment, practise, and turn an idea into something tangible.</p>
+      <a href="assets/Kaylie-Chen-Resume.pdf" class="back-btn" style="margin:1rem 0" target="_blank" rel="noopener">View my résumé ↗</a>
     </div>
   </div>
 
@@ -229,18 +198,12 @@
     <div class="footer-links">
       <a href="mailto:kayliec.jy@gmail.com">kayliec.jy@gmail.com</a>
       <a href="tel:8255613328">(825) 561-3328</a>
-      <a href="https://www.linkedin.com/in/kayliecjy" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/kayliecjy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <span style="color: var(--text-soft)">Vancouver, BC</span>
     </div>
     <p class="footer-copy">© 2026 Kaylie Chen · Biomedical Engineering, UBC</p>
   </footer>
 
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
-  </script>
+
 </body>
 </html>

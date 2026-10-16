@@ -116,17 +116,11 @@
       .dbtl-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
+  <link rel="icon" href="icon.png">
 </head>
 <body>
 
-  <nav>
-    <a class="nav-logo" href="index.html">Kaylie Chen</a>
-    <ul class="nav-links">
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#projects">Work</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <nav aria-label="Main navigation"><a class="nav-logo" href="index.html">Kaylie Chen</a><ul class="nav-links"><li><a href="index.html#about">About</a></li><li><a href="index.html#projects">Work</a></li><li><a href="index.html#design-teams">Design Teams</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="assets/Kaylie-Chen-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a></li></ul></nav>
 
   <a href="index.html" class="back-btn">← Back to Home</a>
 
@@ -224,56 +218,18 @@
     </div>
   </div>
 
-  <!-- PHOTOS -->
-  <div class="photo-section reveal">
-    <p class="section-label">Gallery</p>
-    <h2 class="section-heading">Photos & <em>Process</em></h2>
-    <p class="body-text" style="margin-bottom: 0.5rem;">Add your own photos here — bioreactor builds, lab experiments, Jamboree, team moments.</p>
-    <div class="photo-grid">
-      <div class="photo-placeholder green">
-        <span class="plus">+</span>
-        <span>Add photo: Bioreactor assembly</span>
-      </div>
-      <div class="photo-placeholder green">
-        <span class="plus">+</span>
-        <span>Add photo: CAD / render</span>
-      </div>
-      <div class="photo-placeholder green">
-        <span class="plus">+</span>
-        <span>Add photo: Lab testing</span>
-      </div>
-      <div class="photo-placeholder green">
-        <span class="plus">+</span>
-        <span>Add photo: iGEM Jamboree</span>
-      </div>
-      <div class="photo-placeholder green">
-        <span class="plus">+</span>
-        <span>Add photo: Circuit / soldering</span>
-      </div>
-      <div class="photo-placeholder green">
-        <span class="plus">+</span>
-        <span>Add photo: Team / Gold Medal</span>
-      </div>
-    </div>
-  </div>
-
+<section class="content-section"><aside class="editor-note"><strong>To confirm — iGEM:</strong> This case study retains the project details from your existing portfolio; iGEM is not listed on the new résumé. Confirm your role dates, competition year, and Gold Medal attribution. Add bioreactor, circuitry, or growth-curve images and measured results when available.</aside></section>
   <footer id="contact">
     <div class="footer-name">Kaylie Chen</div>
     <div class="footer-links">
       <a href="mailto:kayliec.jy@gmail.com">kayliec.jy@gmail.com</a>
       <a href="tel:8255613328">(825) 561-3328</a>
-      <a href="https://www.linkedin.com/in/kayliecjy" target="_blank">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/kayliecjy" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <span style="color: var(--text-soft)">Vancouver, BC</span>
     </div>
     <p class="footer-copy">© 2026 Kaylie Chen · Biomedical Engineering, UBC</p>
   </footer>
 
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => observer.observe(el));
-  </script>
+
 </body>
 </html>

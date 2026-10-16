@@ -289,16 +289,30 @@ footer {
 .back-btn:hover { gap: 0.8rem; }
 
 /* REVEAL ANIMATION */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
+.reveal { opacity: 1; }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Fixed-header anchors and accessible, responsive navigation. */
+html { scroll-padding-top: 7rem; }
+[id] { scroll-margin-top: 7rem; }
+nav { gap: 1.5rem; }
+.nav-links { gap: 1.3rem; align-items: center; flex-wrap: wrap; }
+.nav-links a { font-size: .7rem; }
+a:focus-visible { outline: 3px solid var(--rose-dark); outline-offset: 5px; }
+.footer-copy, footer .footer-links span { color: var(--pink-mid) !important; }
+.editor-note { background: #fff3c4; border-left: 4px solid #9a6b13; border-radius: 0 10px 10px 0; padding: 1rem 1.3rem; color: #5d410d; font-size: .85rem; line-height: 1.8; margin: 1.5rem 0; }
+.case-list { padding-left: 1.2rem; color: var(--text-soft); font-size: .92rem; line-height: 1.85; }
+.case-list li { margin-bottom: .7rem; }
+.case-summary { border-block: 1px solid var(--border); padding: 1.5rem 0; margin: 2rem 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.case-summary dt { font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; color: var(--rose-dark); margin-bottom: .5rem; }
+.case-summary dd { font-size: .85rem; line-height: 1.7; color: var(--text-soft); }
+.portrait { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: center; border-radius: 40% 40% 12px 12px; }
+@media (max-width: 768px) { nav { align-items: flex-start; flex-direction: column; gap: .65rem; padding: .8rem 1.5rem; } .nav-links { gap: .65rem 1rem; } .nav-links a { font-size: .62rem; letter-spacing: .06em; } .case-summary { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
 
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
