@@ -232,8 +232,9 @@ nav {
 
 /* FOOTER */
 footer {
-  background: var(--text);
-  color: var(--pink);
+  background: var(--bg);
+  color: var(--text-soft);
+  border-top: 1px solid var(--border);
   padding: 3rem;
   display: flex;
   flex-direction: column;
@@ -246,7 +247,7 @@ footer {
 .footer-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 1.8rem;
-  color: var(--pink);
+  color: var(--rose-dark);
 }
 
 .footer-links {
@@ -257,14 +258,14 @@ footer {
 }
 
 .footer-links a {
-  color: var(--pink-mid);
+  color: var(--text-soft);
   text-decoration: none;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   transition: color 0.3s;
 }
 
-.footer-links a:hover { color: white; }
+.footer-links a:hover { color: var(--rose-dark); }
 
 .footer-copy {
   font-size: 0.72rem;
@@ -304,7 +305,7 @@ nav { gap: 1.5rem; }
 .nav-links { gap: 1.3rem; align-items: center; flex-wrap: wrap; }
 .nav-links a { font-size: .7rem; }
 a:focus-visible { outline: 3px solid var(--rose-dark); outline-offset: 5px; }
-.footer-copy, footer .footer-links span { color: var(--pink-mid) !important; }
+.footer-copy, footer .footer-links span { color: var(--text-soft) !important; }
 .editor-note { background: #fff3c4; border-left: 4px solid #9a6b13; border-radius: 0 10px 10px 0; padding: 1rem 1.3rem; color: #5d410d; font-size: .85rem; line-height: 1.8; margin: 1.5rem 0; }
 .case-list { padding-left: 1.2rem; color: var(--text-soft); font-size: .92rem; line-height: 1.85; }
 .case-list li { margin-bottom: .7rem; }
