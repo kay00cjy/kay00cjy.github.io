@@ -37,3 +37,23 @@ const nav = document.querySelector('nav');
 const syncHeader = () => document.documentElement.style.setProperty('--nav-height', `${nav.getBoundingClientRect().height}px`);
 new ResizeObserver(syncHeader).observe(nav);
 syncHeader();
+
+// Align navigation to the section's text, even when a taller photo centres it.
+function alignSection(hash, behavior = 'smooth') {
+  const section = document.getElementById(hash.slice(1));
+  if (!section) return;
+  const target = section.querySelector('.section-label') || section;
+  const top = target.getBoundingClientRect().top + window.scrollY - nav.getBoundingClientRect().height - 27;
+  window.scrollTo({ top, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : behavior });
+}
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    if (!document.getElementById(link.hash.slice(1))) return;
+    event.preventDefault();
+    history.pushState(null, '', link.hash);
+    alignSection(link.hash);
+  });
+});
+window.addEventListener('load', () => { if (location.hash) alignSection(location.hash, 'instant'); });
+window.addEventListener('popstate', () => { if (location.hash) alignSection(location.hash); });
