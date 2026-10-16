@@ -6,10 +6,10 @@
   <title>Kaylie Chen — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="shared.css">
-  <link rel="stylesheet" href="case-details.css">
-  <link rel="stylesheet" href="home.css">
-  <link rel="stylesheet" href="skills.css">
+  <link rel="stylesheet" href="shared.css?v=20261016-2">
+  <link rel="stylesheet" href="case-details.css?v=20261016-2">
+  <link rel="stylesheet" href="home.css?v=20261016-2">
+  <link rel="stylesheet" href="skills.css?v=20261016-2">
   <link rel="icon" href="icon.png">
 </head>
 <body class="portfolio-home">
@@ -29,18 +29,14 @@
         <a href="assets/Kaylie-Chen-Resume.pdf" target="_blank" rel="noopener" class="btn-handwritten btn-ghost-hw">View my resume &nearr;</a>
       </div>
     </div>
-    <div class="hero-photo-frame"><img class="about-photo" src="assets/kaylie-chen.jpg" alt="Kaylie Chen in a fabrication lab beside 3D printers" width="1600" height="1067" fetchpriority="high"></div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="reveal">
-      <p class="section-label">About Me</p>
-      <h2 class="section-title"> Why engineering?</h2>
-      <p class="about-text">Before engineering, I wanted to be a pianist. Performing for patients and families at Alberta Children’s Hospital showed me how something I created could make a difference to someone else. Biomedical engineering gave that impulse a new direction: building technology that supports people’s health and independence.</p>
-      <p class="about-text">I'm now a <strong>Mechanical Test Engineering Intern at Kardium</strong>, working on medical-device verification and validation. Outside work, I lead the mechanical sub-team at <strong>UBC Bionic Hand</strong> and am learning to play electric guitar.</p>
-      <a href="about.html" class="about-btn">More about me!</a>
-    </div>
+    <aside class="hero-aside" aria-label="About Kaylie">
+      <div class="hero-photo-frame"><img class="hero-photo" src="assets/kaylie-chen.jpg" alt="Kaylie Chen in a fabrication lab beside 3D printers" width="280" height="350" fetchpriority="high"></div>
+      <a class="story-link" id="about" href="about.html">
+        <span class="section-label">A little about me</span>
+        <span class="story-title">Why engineering? <span aria-hidden="true">↗</span></span>
+        <span class="story-description">From making music to building technology that helps people. Read my story.</span>
+      </a>
+    </aside>
   </section>
 
 <section class="portfolio-skills" aria-labelledby="technical-skills-title">
