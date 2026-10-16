@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="shared.css">
+  <link rel="stylesheet" href="case-details.css">
   <link rel="stylesheet" href="home.css">
   <link rel="icon" href="icon.png">
 </head>
@@ -16,8 +17,6 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg-blob"></div>
-    <div class="hero-bg-blob2"></div>
     <div class="hero-content">
       <p class="hero-tag">Biomedical Engineering · UBC · Vancouver</p>
       <h1 class="hero-name"><em>Kaylie Chen</em></h1>
@@ -28,17 +27,12 @@
         <a href="assets/Kaylie-Chen-Resume.pdf" target="_blank" rel="noopener" class="btn-handwritten btn-ghost-hw">View my résumé &nearr;</a>
       </div>
     </div>
-    <div class="scroll-hint">
-      <div class="scroll-line"></div>
-      <!-- Scroll -->
-    </div>
+    <div class="hero-portrait"><img src="assets/kaylie-chen.jpg" alt="Kaylie Chen in a fabrication lab beside 3D printers" width="1600" height="1067" fetchpriority="high"></div>
   </section>
 
   <!-- ABOUT -->
   <section class="about" id="about">
-    <div class="about-visual reveal">
-      <img class="about-photo" src="assets/kaylie-chen.jpg" alt="Kaylie Chen in a fabrication lab beside 3D printers" width="1600" height="1067" loading="lazy">
-    </div>
+    <div class="about-visual" aria-hidden="true"><div class="about-blob"></div></div>
     <div class="reveal">
       <p class="section-label">About Me</p>
       <h2 class="section-title"> Why engineering?</h2>
@@ -48,12 +42,17 @@
     </div>
   </section>
 
-  <!-- SKILLS STRIP -->
-  <div class="skills-strip">
-    <div class="skills-track"><span class="skill-pill">SolidWorks</span><span class="skill-pill">Fusion 360</span><span class="skill-pill">Onshape</span><span class="skill-pill">FEA</span><span class="skill-pill">GD&T</span><span class="skill-pill">DFMA</span><span class="skill-pill">CNC & Manual Milling</span><span class="skill-pill">FDM Prototyping</span><span class="skill-pill">Python</span><span class="skill-pill">MATLAB</span><span class="skill-pill">Medical Device V&V</span><span class="skill-pill">Test Method Validation</span></div>
-  </div>
+<section class="skills-section" aria-labelledby="skills-title">
+    <p class="section-label">My toolkit</p>
+    <h2 class="section-title" id="skills-title">From idea to <em>tested hardware.</em></h2>
+    <div class="toolkit-grid">
+      <div class="toolkit-group"><h3>Design &amp; analyze</h3><p>SolidWorks · Fusion 360 · Onshape<br>FEA · GD&amp;T · DFMA</p></div>
+      <div class="toolkit-group"><h3>Build &amp; prototype</h3><p>CNC &amp; manual milling<br>FDM 3D printing · Python · MATLAB</p></div>
+      <div class="toolkit-group"><h3>Test &amp; refine</h3><p>Medical-device verification &amp; validation<br>Test method validation · Statistical analysis</p></div>
+    </div>
+  </section>
 
-<section class="projects" id="projects"><p class="section-label">01 · Work Experience</p><h2 class="section-title">Engineering in <em>practice.</em></h2><p class="projects-intro">From early prototypes to repeatable manufacturing and structured testing — experience across the medical-device development process.</p><div class="project-grid"><a href="work.html#kardium" class="project-card reveal"><div class="project-card-inner card-work"><div class="card-number">01</div><p class="card-tag">Sep 2026 · Present · Medical-device testing</p><h3 class="card-title">Kardium</h3><p class="card-desc">Mechanical verification and validation, custom machined test fixtures, and statistical analysis to support product and design decisions.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a><a href="work.html#sentact" class="project-card reveal"><div class="project-card-inner card-sentact"><div class="card-number">02</div><p class="card-tag">Jul · Aug 2026 · Manufacturing</p><h3 class="card-title">Sentact Technologies</h3><p class="card-desc">A Python-to-SolidWorks workflow for customizable carbon-fibre layup rollers, plus overmoulding tooling that reduced part defects by 25%.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a><a href="work.html#trumotion" class="project-card reveal"><div class="project-card-inner card-work"><div class="card-number">03</div><p class="card-tag">May · Jun 2026 · Rehabilitation</p><h3 class="card-title">TruMotion Technologies</h3><p class="card-desc">FEA-led component redesign under 900 N operating loads, biomechanical safety limits, and GD&T drawings for fabrication.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a></div><a class="section-link" href="work.html">Explore my work experience &rarr;</a></section><section class="projects" id="design-teams"><p class="section-label">02 · Design Teams</p><h2 class="section-title">Built through <em>collaboration.</em></h2><p class="projects-intro">Student-led engineering that brings mechanical design, hands-on iteration, and teamwork together.</p><div class="project-grid"><a href="bionics.html" class="project-card reveal"><div class="project-card-inner card-bionics"><div class="card-number">01</div><p class="card-tag">Mechanical Sub-Team Lead</p><h3 class="card-title">UBC Bionic Hand</h3><p class="card-desc">Leading a seven-member mechanical sub-team through the fourth and fifth prosthetic-arm iterations, with bevel-gear wrist actuation and cross-team integration.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a><a href="igem.html" class="project-card reveal"><div class="project-card-inner card-igem"><div class="card-number">02</div><p class="card-tag">Dry Lab · Hardware</p><h3 class="card-title">UBC iGEM</h3><p class="card-desc">Bioreactor design, rapid prototyping, circuit assembly, and structured biological testing through design–build–test–learn cycles.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a></div></section>
+<section class="projects" id="projects"><p class="section-label">01 · Work Experience</p><h2 class="section-title">Engineering in <em>practice.</em></h2><p class="projects-intro">From early prototypes to repeatable manufacturing and structured testing — experience across the medical-device development process.</p><div class="project-grid"><a href="kardium.html" data-case="kardium" class="project-card reveal"><div class="project-card-inner card-work"><div class="card-number">01</div><p class="card-tag">Sep 2026–Present · Medical-device testing</p><h3 class="card-title">Kardium</h3><p class="card-desc">A medical-device company developing integrated mapping and ablation technology for the treatment of atrial fibrillation.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a><a href="sentact.html" data-case="sentact" class="project-card reveal"><div class="project-card-inner card-sentact"><div class="card-number">02</div><p class="card-tag">Jul–Aug 2026 · Manufacturing</p><h3 class="card-title">Sentact Technologies</h3><p class="card-desc">A UBC HATCH Ventures startup developing composite-manufacturing solutions, including rollers for carbon-fibre layup.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a><a href="trumotion.html" data-case="trumotion" class="project-card reveal"><div class="project-card-inner card-work"><div class="card-number">03</div><p class="card-tag">May–Jun 2026 · Rehabilitation</p><h3 class="card-title">TruMotion Technologies</h3><p class="card-desc">A UBC HATCH Ventures startup developing motor-driven rehabilitation technology to support movement and recovery.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a></div></section><section class="projects" id="design-teams"><p class="section-label">02 · Design Teams</p><h2 class="section-title">Built through <em>collaboration.</em></h2><p class="projects-intro">Student-led engineering that brings mechanical design, hands-on iteration, and teamwork together.</p><div class="project-grid"><a href="bionics.html" data-case="bionics" class="project-card reveal"><div class="project-card-inner card-bionics"><div class="card-number">01</div><p class="card-tag">Mechanical Sub-Team Lead</p><h3 class="card-title">UBC Bionic Hand</h3><p class="card-desc">A student design team developing functional, accessible prosthetic arms through mechanical, electrical, and controls engineering.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a><a href="igem.html" data-case="igem" class="project-card reveal"><div class="project-card-inner card-igem"><div class="card-number">02</div><p class="card-tag">Dry Lab · Hardware</p><h3 class="card-title">UBC iGEM</h3><p class="card-desc">UBC’s synthetic biology design team, combining biological research and engineered systems for the international iGEM competition.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a></div></section>
   <!-- FOOTER -->
   <footer id="contact">
     <div class="footer-name">Kaylie Chen</div>
@@ -67,5 +66,242 @@
   </footer>
 
 
+<dialog class="experience-dialog" aria-label="Experience details">
+    <div class="dialog-toolbar"><span>Experience &amp; projects</span><button type="button" class="dialog-close" aria-label="Close experience details">Close <span aria-hidden="true">×</span></button></div>
+    <div class="dialog-body"></div>
+  </dialog>
+  <template id="case-kardium"><article class="case-content">
+    <p class="section-label">01 · Medical-device verification &amp; validation</p>
+    <h2 class="section-heading">Kardium <em>Inc.</em></h2>
+    <p class="body-text"><strong>Mechanical Test Engineering Intern · September 2026–Present · Burnaby, BC</strong></p>
+    <p class="body-text">At Kardium, I support medical-device development through mechanical testing, fixture design, and data analysis. The work has strengthened how I connect engineering requirements with controlled, repeatable tests and well-documented results.</p>
+    <dl class="case-summary"><div><dt>Focus</dt><dd>Mechanical V&amp;V and test method validation</dd></div><div><dt>Hands-on work</dt><dd>Designing, machining, and assembling test fixtures</dd></div><div><dt>Approach</dt><dd>Controlled testing and statistical analysis</dd></div></dl>
+    <h3 class="section-heading">From requirements to <em>reliable tests</em></h3>
+    <ul class="case-list">
+      <li>Execute mechanical verification and validation tests under approved standard operating procedures, test protocols, and Test Method Validation requirements to support product and design decisions.</li>
+      <li>Design, machine, and assemble custom fixtures and jigs to improve loading uniformity and sample alignment for specific test conditions.</li>
+      <li>Work with risk and design teams to scope project requirements and contribute to test method validation procedures.</li>
+      <li>Conduct a characterization study on a new design feature, using systematic evaluation to understand mechanical behaviour.</li>
+      <li>Analyze mechanical test data statistically to assess validity, variability, and significance, then document findings using Good Documentation Practices.</li>
+    </ul>
+    <p class="body-text">Testing has taught me to ask why behind each design decision: how a component is loaded, how a fixture affects the measurement, and what the results can tell us about the design.</p>
+    <aside class="editor-note"><strong>To add — Kardium:</strong> Add a shareable example of a fixture or characterization study and its outcome when available. The supplied documents do not include a completed study result or a quantified improvement.</aside>
+  </article></template>
+<template id="case-sentact"><article class="case-content">
+    <p class="section-label">02 · Tooling &amp; manufacturing processes</p>
+    <h2 class="section-heading">Sentact <em>Technologies</em></h2>
+    <p class="body-text"><strong>Mechanical Engineering Intern · July–August 2026 · Vancouver, BC</strong><br>UBC HATCH Ventures</p>
+    <p class="body-text">At Sentact, I worked on tooling and manufacturing processes for an automated fibre placement (AFP) roller used in carbon-fibre layup. The challenge was to make dimensional customization more efficient while producing consistent polyurethane-overmoulded parts.</p>
+    <dl class="case-summary"><div><dt>Design</dt><dd>Parametric AFP roller workflow</dd></div><div><dt>Build &amp; test</dt><dd>3D-printed moulds, casting, and injection moulding</dd></div><div><dt>Result</dt><dd>25% reduction in part defects</dd></div></dl>
+    <h3 class="section-heading">Making customization <em>repeatable</em></h3>
+    <ul class="case-list">
+      <li>Developed a fully parametric workflow connecting a Python dashboard with SolidWorks macros and configurations, enabling rapid dimensional customization of the roller.</li>
+      <li>Designed and fabricated custom 3D-printed moulds for polyurethane overmoulding, reducing part defects by 25%.</li>
+      <li>Validated functional roller prototypes through polyurethane casting and injection moulding, refining process parameters to improve reproducibility and consistency.</li>
+      <li>Iterated on tooling geometry, process parameters, and usability to reduce operator load and make the workflow more scalable.</li>
+    </ul>
+    <p class="body-text">This experience connected CAD automation with the realities of fabrication: a flexible model only becomes useful when the tooling and process can consistently produce the intended part.</p>
+    <aside class="editor-note"><strong>To add — Sentact:</strong> Add a roller or mould image and a screenshot of the Python-to-SolidWorks workflow. A short caption explaining the defect measurement behind the 25% result would strengthen this case study.</aside>
+  </article></template>
+<template id="case-trumotion"><article class="case-content">
+    <p class="section-label">03 · Biomechanics &amp; mechanical design</p>
+    <h2 class="section-heading">TruMotion <em>Technologies</em></h2>
+    <p class="body-text"><strong>Mechanical Engineering Intern · May–June 2026 · Vancouver, BC</strong><br>UBC HATCH Ventures</p>
+    <p class="body-text">I worked on a motor-driven rehabilitation device, focusing on the mechanical components that carry operating loads and interface with human movement. My work combined structural analysis, biomechanical constraints, and preparation for fabrication.</p>
+    <dl class="case-summary"><div><dt>Operating load</dt><dd>900 N</dd></div><div><dt>Analysis</dt><dd>FEA and human range-of-motion constraints</dd></div><div><dt>Deliverables</dt><dd>Redesigned components and GD&amp;T drawings</dd></div></dl>
+    <h3 class="section-heading">Designing around <em>human movement</em></h3>
+    <ul class="case-list">
+      <li>Redesigned load-bearing components using finite element analysis to improve structural alignment and reduce mechanical backlash under operating loads of 900 N.</li>
+      <li>Defined and integrated mechanical safety limits using human range-of-motion and biomechanical constraints to prevent unsafe joint positions during rehabilitation.</li>
+      <li>Redesigned prototype components for manufacture, developed GD&amp;T engineering drawings, and coordinated directly with manufacturers through fabrication.</li>
+    </ul>
+    <p class="body-text">Working on rehabilitation hardware showed me how directly biomechanics shapes design. Structural performance, safe movement, and manufacturability all had to be considered together.</p>
+    <aside class="editor-note"><strong>To add — TruMotion:</strong> Add a CAD or FEA image showing the component redesign. Include measured before-and-after alignment or backlash results if you have them; the supplied documents do not quantify those improvements.</aside>
+  </article></template>
+<template id="case-bionics"><article class="case-content team-case">  <div class="page-hero">
+    <span class="hero-accent">Design Team · Mechanical Sub-Team Lead</span>
+    <h1 class="page-title">UBC <em>Bionic Hand</em></h1>
+    <div class="divider"></div>
+    <p class="page-intro">
+      Leading mechanical development through the fourth and fifth iterations of UBC Bionic Hand's
+      prosthetic arm, with work spanning body-powered wrist actuation, mechanical design,
+      and integration with electrical and controls teams.
+    </p>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="content-section reveal">
+    <p class="section-label">Overview</p>
+    <h2 class="section-heading">The <em>project</em></h2>
+    <p class="body-text">
+      UBC Bionic Hand is a student design team working to develop low-cost, functional prosthetic 
+      limbs. As Mechanical Sub-Team Lead since September 2024, I oversee a seven-member team in the 
+      design, prototyping, and manufacturing of the arm's fourth and fifth iterations — focused on improving 
+      functionality, reliability, and manufacturability compared to previous versions.
+    </p>
+    <p class="body-text">My mechanism work includes a gear-driven wrist using bevel gears and compliant linkages for controlled actuation in a fully mechanical, body-powered prosthetic arm. Torque and load analysis supported gear sizing, component strength, and the potential for future motorized iterations.</p>
+
+    <div class="skills-row">
+      <span class="skill-tag">SolidWorks</span>
+      <span class="skill-tag">3D Printing (FDM)</span>
+      <span class="skill-tag">Tolerance Analysis</span>
+      <span class="skill-tag">Gear Design</span>
+      <span class="skill-tag">Machining</span>
+      <span class="skill-tag">Systems Integration</span>
+      <span class="skill-tag">Team Leadership</span>
+    </div>
+  </div>
+
+  <!-- GOALS & ACHIEVEMENTS -->
+  <div class="content-section reveal">
+    <p class="section-label">Goals & Achievements</p>
+    <h2 class="section-heading">What I <em>set out to do</em> — and did</h2>
+
+    <div class="highlight-box">
+      <h3>Key Accomplishments ✦</h3>
+      <ul>
+        <li>Helped deliver a prosthetic-arm iteration <strong>ahead of schedule</strong> with full functionality through coordinated design reviews</li>
+        <li>Led a seven-member mechanical sub-team, defining design objectives, establishing the mechanical design framework, and managing project timelines</li>
+        <li>Facilitated structured design reviews, milestone planning, and communication with electrical and controls teams to improve design accountability and integration</li>
+        <li>Researched and prototyped a <strong>gear-based wrist rotation mechanism</strong> using bevel gears and compliant linkages for controlled, natural-feeling actuation</li>
+        <li>Performed gear torque analysis and load analysis to verify gear strength under applied wrist loads — ensuring structural reliability and adaptability for future motorized upgrades</li>
+        <li>Coordinated cross-functional integration with the electrical sub-team for smooth systems-level performance</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="content-section reveal">
+    <p class="section-label">Process</p>
+    <h2 class="section-heading">Design <em>journey</em></h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 1 · Requirements</p>
+        <h4 class="timeline-title">Defining the Design Framework</h4>
+        <p class="timeline-desc">Established design objectives and requirements in collaboration with the full team. Set mechanical performance targets around range of motion, load capacity, and assembly reproducibility.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 2 · Concept Design</p>
+        <h4 class="timeline-title">Wrist Mechanism Research & Prototyping</h4>
+        <p class="timeline-desc">Researched bevel gear configurations and compliant linkage systems. Created early CAD concepts in SolidWorks and ran initial torque analysis to evaluate feasibility.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 3 · Iteration</p>
+        <h4 class="timeline-title">FDM Prototyping & Testing</h4>
+        <p class="timeline-desc">Iterated through multiple 3D-printed prototypes with each cycle improving dimensional accuracy, fit, and mechanical performance. Applied tolerance analysis to all critical interfaces.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 4 · Integration</p>
+        <h4 class="timeline-title">Cross-Functional Systems Integration</h4>
+        <p class="timeline-desc">Worked with electrical and controls teams to align interfaces, ownership, and milestones. Prioritized high-risk tasks and balanced work across parallel mechanical projects.</p>
+      </div>
+      <div class="timeline-item">
+        <p class="timeline-label">Phase 5 · Delivery</p>
+        <h4 class="timeline-title">Functional Delivery &amp; Continued Iteration</h4>
+        <p class="timeline-desc">Coordinated design reviews to deliver a functional arm iteration ahead of schedule, while continuing mechanical development through the fourth and fifth iterations.</p>
+      </div>
+    </div>
+  </div>
+
+<section class="content-section"><aside class="editor-note"><strong>To add — Bionic Hand:</strong> Add a full-arm photo, a close-up of the bevel-gear wrist, and a CAD or prototype comparison. Include wrist range of motion, tested loads, or other measured results if available.</aside></section>
+</article></template>
+<template id="case-igem"><article class="case-content team-case">  <div class="page-hero">
+    <span class="hero-accent">Design Team · Dry Lab Hardware</span>
+    <h1 class="page-title">UBC <em>iGEM</em></h1>
+    <div class="divider"></div>
+    <p class="page-intro">
+      International Genetically Engineered Machine — Gold Medal at the iGEM Grand Jamboree 
+      competing against 400+ teams globally. I designed and iterated bioreactor systems for 
+      cyanobacteria and Caulobacter cultivation using DBTL cycles and aseptic testing protocols.
+    </p>
+    <div class="gold-badge">
+      🥇 Gold Medal — iGEM Grand Jamboree · 400+ Teams
+    </div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <div class="content-section reveal">
+    <p class="section-label">Overview</p>
+    <h2 class="section-heading">The <em>project</em></h2>
+    <p class="body-text">
+      UBC iGEM is UBC's team for the International Genetically Engineered Machine competition — 
+      a global synthetic biology challenge. As a Dry Lab Hardware member since January 2025, 
+      I work on the physical systems that enable our biological experiments: bioreactors designed 
+      to cultivate cyanobacteria under controlled conditions for research into sustainable 
+      bioprocesses.
+    </p>
+    <p class="body-text">
+      My work spans mechanical design, circuit assembly, and experimental testing — bridging 
+      hardware engineering with biological requirements. The team competed at the iGEM Grand 
+      Jamboree, where we secured a Gold Medal among 400+ competing teams.
+    </p>
+
+    <div class="skills-row">
+      <span class="skill-tag green">CAD (Fusion 360)</span>
+      <span class="skill-tag green">FDM 3D Printing</span>
+      <span class="skill-tag green">THT Soldering</span>
+      <span class="skill-tag green">Aseptic Technique</span>
+      <span class="skill-tag green">GLP</span>
+      <span class="skill-tag green">Fluid Dynamics</span>
+      <span class="skill-tag green">Arduino</span>
+      <span class="skill-tag green">DBTL</span>
+    </div>
+  </div>
+
+  <!-- DBTL CYCLE -->
+  <div class="content-section reveal">
+    <p class="section-label">Methodology</p>
+    <h2 class="section-heading">Working through the <em>DBTL cycle</em></h2>
+    <p class="body-text">
+      Each iteration of our bioreactor was driven by a structured design–build–test–learn 
+      cycle. This structured approach let us integrate academic feedback, computational fluid 
+      dynamics analysis, and hands-on experimental results into each successive version.
+    </p>
+    <div class="dbtl-grid">
+      <div class="dbtl-card">
+        <div class="dbtl-letter">D</div>
+        <div class="dbtl-word">Design</div>
+        <p class="dbtl-desc">Literature reviews, CAD modeling, and performance metric definition based on cell culture requirements.</p>
+      </div>
+      <div class="dbtl-card">
+        <div class="dbtl-letter">B</div>
+        <div class="dbtl-word">Build</div>
+        <p class="dbtl-desc">Rapid prototyping with FDM printing, drilling, woodworking, and circuit assembly with THT soldering.</p>
+      </div>
+      <div class="dbtl-card">
+        <div class="dbtl-letter">T</div>
+        <div class="dbtl-word">Test</div>
+        <p class="dbtl-desc">Bacterial growth curve experiments under aseptic conditions. Structured protocols, quantitative evaluation.</p>
+      </div>
+      <div class="dbtl-card">
+        <div class="dbtl-letter">L</div>
+        <div class="dbtl-word">Learn</div>
+        <p class="dbtl-desc">Integrate results and feedback into the next version — improving modularity, fluid dynamics, and lighting.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACHIEVEMENTS -->
+  <div class="content-section reveal">
+    <p class="section-label">Goals & Achievements</p>
+    <h2 class="section-heading">What we <em>built and achieved</em></h2>
+
+    <div class="highlight-box">
+      <h3>Key Contributions ✦</h3>
+      <ul>
+        <li>Designed bioreactors optimized for aeration, agitation, and lighting based on literature reviews and performance metrics — using CAD and rapid prototyping</li>
+        <li>Iterated through multiple bioreactor designs using a DBTL cycle, integrating academic feedback, computational analysis, and user testing to improve fluid dynamics and lighting uniformity</li>
+        <li>Cultured Cyanobacteria and Caulobacter under aseptic conditions, applying Good Laboratory Practice (GLP) techniques throughout</li>
+        <li>Developed an end-to-end structured testing protocol for bacterial growth curve experiments — establishing quantitative benchmarks for evaluation</li>
+        <li>Assembled circuitry for a low-gravity bioreactor using THT soldering, integrating rotary slip rings for reliable two-axis rotation with continuous electrical connectivity</li>
+        <li>Competed at the iGEM Grand Jamboree against 400+ global teams — <strong>secured a Gold Medal</strong></li>
+      </ul>
+    </div>
+  </div>
+
+<section class="content-section"><aside class="editor-note"><strong>To confirm — iGEM:</strong> This case study retains the project details from your existing portfolio; iGEM is not listed on the new résumé. Confirm your role dates, competition year, and Gold Medal attribution. Add bioreactor, circuitry, or growth-curve images and measured results when available.</aside></section>
+</article></template>
+<script src="portfolio.js" defer></script>
 </body>
 </html>

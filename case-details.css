@@ -1,0 +1,214 @@
+
+    .hero-accent {
+      display: inline-block;
+      background: var(--pink);
+      padding: 0.2rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: var(--rose-dark);
+      margin-bottom: 1.2rem;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin-top: 2rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--rose), var(--pink));
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2.5rem;
+      padding-left: 1rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1.6rem;
+      top: 0.4rem;
+      width: 10px;
+      height: 10px;
+      background: var(--rose);
+      border-radius: 50%;
+      border: 2px solid var(--bg);
+    }
+
+    .timeline-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rose);
+      margin-bottom: 0.3rem;
+    }
+
+    .timeline-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .timeline-desc {
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--text-soft);
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, var(--pink) 0%, #f9e0d8 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .highlight-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .highlight-box ul li {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      display: flex;
+      gap: 0.6rem;
+      line-height: 1.6;
+    }
+
+    .highlight-box ul li::before {
+      content: "✦";
+      color: var(--rose);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+  
+
+    .hero-accent {
+      display: inline-block;
+      background: #d4e8dd;
+      padding: 0.2rem 0.8rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: #3a7a56;
+      margin-bottom: 1.2rem;
+    }
+
+    .gold-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #f0ddb8, #f9ecd4);
+      border: 1px solid #c9a84c;
+      border-radius: 50px;
+      padding: 0.6rem 1.4rem;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #7a5a1a;
+      margin: 1.5rem 0;
+    }
+
+    .dbtl-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .dbtl-card {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      border-radius: 16px;
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .dbtl-letter {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 300;
+      color: #7aad8f;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .dbtl-word {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+      margin-bottom: 0.5rem;
+    }
+
+    .dbtl-desc {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #d4e8dd 0%, #edf4f0 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+    }
+
+    .highlight-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: var(--text);
+    }
+
+    .highlight-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .highlight-box ul li {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      display: flex;
+      gap: 0.6rem;
+      line-height: 1.6;
+    }
+
+    .highlight-box ul li::before {
+      content: "✦";
+      color: #3a7a56;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .skill-tag.green {
+      border-color: #7aad8f;
+      color: #3a7a56;
+    }
+
+    @media (max-width: 768px) {
+      .dbtl-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  

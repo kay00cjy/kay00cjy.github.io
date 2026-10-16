@@ -297,8 +297,9 @@ footer {
 }
 
 /* Fixed-header anchors and accessible, responsive navigation. */
-html { scroll-padding-top: 7rem; }
-[id] { scroll-margin-top: 7rem; }
+html { scroll-padding-top: calc(var(--nav-height, 6rem) + 1.5rem); scrollbar-gutter: stable; }
+[id] { scroll-margin-top: 0; }
+.individual-case { padding-top: 3rem; }
 nav { gap: 1.5rem; }
 .nav-links { gap: 1.3rem; align-items: center; flex-wrap: wrap; }
 .nav-links a { font-size: .7rem; }

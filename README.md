@@ -31,3 +31,9 @@ Commit and push the updated HTML, CSS, and assets directory to the existing GitH
 ## Verification
 
 Checked local links, asset files, anchor targets, and duplicate IDs. Chrome checks at desktop (1440px) and mobile (390px) cover the main pages, image loading, horizontal overflow, navigation anchors, and the hero scroll link.
+
+## Experience navigation
+
+Homepage cards open individual native dialogs with a blurred backdrop, keyboard focus containment, Escape to close, and focus restoration. Ctrl/Cmd-click or disabled JavaScript opens a standalone page. Work pages: kardium.html, sentact.html, trumotion.html. Team pages: bionics.html, igem.html. Popup content is stored in the case-* templates in index.html; update those along with standalone pages when editing details.
+
+Company description reference: https://kardium.com/about/
