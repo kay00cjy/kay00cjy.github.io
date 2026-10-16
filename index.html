@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="shared.css">
   <link rel="stylesheet" href="case-details.css">
   <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="skills.css">
   <link rel="icon" href="icon.png">
 </head>
 <body>
 
-  <nav aria-label="Main navigation"><a class="nav-logo" href="index.html">Kaylie Chen</a><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#projects">Work</a></li><li><a href="#design-teams">Design Teams</a></li><li><a href="#contact">Contact</a></li><li><a href="assets/Kaylie-Chen-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a></li></ul></nav>
+  <nav aria-label="Main navigation"><a class="nav-logo" href="index.html">Kaylie Chen</a><ul class="nav-links"><li><a href="#about">About</a></li><li><a href="#projects">Work</a></li><li><a href="#design-teams">Design Teams</a></li><li><a href="#contact">Contact</a></li><li><a href="assets/Kaylie-Chen-Resume.pdf" target="_blank" rel="noopener">Resume ↗</a></li></ul></nav>
 
   <!-- HERO -->
   <section class="hero">
@@ -26,7 +27,7 @@
       <p class="hero-desc">Hello! I'm a fourth-year Biomedical Engineering student at UBC, specializing in mechanical engineering. I design, build, and test with people in mind — from rehabilitation devices and prosthetics to manufacturing tools and medical-device verification.</p>
       <div class="hero-buttons">
         <a href="#projects" class="btn-handwritten btn-primary-hw">Explore my work &darr;</a>
-        <a href="assets/Kaylie-Chen-Resume.pdf" target="_blank" rel="noopener" class="btn-handwritten btn-ghost-hw">View my résumé &nearr;</a>
+        <a href="assets/Kaylie-Chen-Resume.pdf" target="_blank" rel="noopener" class="btn-handwritten btn-ghost-hw">View my resume &nearr;</a>
       </div>
     </div>
   </section>
@@ -43,7 +44,26 @@
     </div>
   </section>
 
-<div class="skills-strip"><div class="skills-track"><span class="skill-pill">SolidWorks</span><span class="skill-pill">Fusion 360</span><span class="skill-pill">Onshape</span><span class="skill-pill">FEA</span><span class="skill-pill">GD&amp;T</span><span class="skill-pill">DFMA</span><span class="skill-pill">CNC &amp; Manual Milling</span><span class="skill-pill">FDM Prototyping</span><span class="skill-pill">Python</span><span class="skill-pill">MATLAB</span><span class="skill-pill">Medical Device V&amp;V</span><span class="skill-pill">Test Method Validation</span></div></div>
+<section class="portfolio-skills" aria-labelledby="technical-skills-title">
+  <div class="portfolio-skills__panel">
+    <h2 class="portfolio-skills__title" id="technical-skills-title">Technical skills</h2>
+    <p class="portfolio-skills__intro">The tools and methods I use to design, build, and test hardware.</p>
+    <div class="portfolio-skills__groups">
+      <div class="portfolio-skills__group">
+        <h3>Mechanical design &amp; analysis</h3>
+        <ul><li>SolidWorks</li><li>Fusion 360</li><li>Onshape</li><li>Finite element analysis (FEA)</li><li>GD&amp;T</li><li>Design for manufacture &amp; assembly</li></ul>
+      </div>
+      <div class="portfolio-skills__group">
+        <h3>Fabrication &amp; programming</h3>
+        <ul><li>CNC &amp; manual milling</li><li>FDM 3D printing</li><li>Python</li><li>MATLAB</li></ul>
+      </div>
+      <div class="portfolio-skills__group">
+        <h3>Testing &amp; validation</h3>
+        <ul><li>Medical-device verification &amp; validation</li><li>Test method validation</li><li>Statistical analysis</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="projects" id="projects"><p class="section-label">01 · Work Experience</p><h2 class="section-title">Engineering in <em>practice.</em></h2><p class="projects-intro">From early prototypes to repeatable manufacturing and structured testing — experience across the medical-device development process.</p><div class="project-grid"><a href="kardium.html" data-case="kardium" class="project-card reveal"><div class="project-card-inner card-work"><div class="card-number">01</div><p class="card-tag">Sep 2026–Present · Medical-device testing</p><h3 class="card-title">Kardium</h3><p class="card-desc">A medical-device company developing integrated mapping and ablation technology for the treatment of atrial fibrillation.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a><a href="sentact.html" data-case="sentact" class="project-card reveal"><div class="project-card-inner card-sentact"><div class="card-number">02</div><p class="card-tag">Jul–Aug 2026 · Manufacturing</p><h3 class="card-title">Sentact Technologies</h3><p class="card-desc">A UBC HATCH Ventures startup developing composite-manufacturing solutions, including rollers for carbon-fibre layup.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a><a href="trumotion.html" data-case="trumotion" class="project-card reveal"><div class="project-card-inner card-work"><div class="card-number">03</div><p class="card-tag">May–Jun 2026 · Rehabilitation</p><h3 class="card-title">TruMotion Technologies</h3><p class="card-desc">A UBC HATCH Ventures startup developing motor-driven rehabilitation technology to support movement and recovery.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a></div></section><section class="projects" id="design-teams"><p class="section-label">02 · Design Teams</p><h2 class="section-title">Built through <em>collaboration.</em></h2><p class="projects-intro">Student-led engineering that brings mechanical design, hands-on iteration, and teamwork together.</p><div class="project-grid"><a href="bionics.html" data-case="bionics" class="project-card reveal"><div class="project-card-inner card-bionics"><div class="card-number">01</div><p class="card-tag">Mechanical Sub-Team Lead</p><h3 class="card-title">UBC Bionic Hand</h3><p class="card-desc">A student design team developing functional, accessible prosthetic arms through mechanical, electrical, and controls engineering.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a><a href="igem.html" data-case="igem" class="project-card reveal"><div class="project-card-inner card-igem"><div class="card-number">02</div><p class="card-tag">Dry Lab · Hardware</p><h3 class="card-title">UBC iGEM</h3><p class="card-desc">UBC’s synthetic biology design team, combining biological research and engineered systems for the international iGEM competition.</p><span class="card-arrow" aria-hidden="true">↗</span></div></a></div></section>
   <!-- FOOTER -->
@@ -293,7 +313,7 @@
     </div>
   </div>
 
-<section class="content-section"><aside class="editor-note"><strong>To confirm — iGEM:</strong> This case study retains the project details from your existing portfolio; iGEM is not listed on the new résumé. Confirm your role dates, competition year, and Gold Medal attribution. Add bioreactor, circuitry, or growth-curve images and measured results when available.</aside></section>
+<section class="content-section"><aside class="editor-note"><strong>To confirm — iGEM:</strong> This case study retains the project details from your existing portfolio; iGEM is not listed on the new resume. Confirm your role dates, competition year, and Gold Medal attribution. Add bioreactor, circuitry, or growth-curve images and measured results when available.</aside></section>
 </article></template>
 <script src="portfolio.js" defer></script>
 </body>

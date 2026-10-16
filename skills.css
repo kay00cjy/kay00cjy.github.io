@@ -1,0 +1,61 @@
+/* Scoped to the skills section so other portfolio layouts stay unchanged. */
+.portfolio-skills {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 2rem 3rem;
+}
+.portfolio-skills__panel {
+  padding: 2rem;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+.portfolio-skills__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: .5rem;
+}
+.portfolio-skills__intro {
+  color: var(--text-soft);
+  font-size: .85rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+.portfolio-skills__groups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.portfolio-skills__group {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  min-width: 0;
+}
+.portfolio-skills__group h3 {
+  font-size: .78rem;
+  font-weight: 500;
+  color: var(--rose-dark);
+  margin-bottom: .8rem;
+}
+.portfolio-skills__group ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.portfolio-skills__group li {
+  font-size: .72rem;
+  line-height: 1.5;
+  color: var(--text-soft);
+  padding: .35rem .65rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 768px) {
+  .portfolio-skills { padding: 1.5rem; }
+  .portfolio-skills__panel { padding: 1.4rem; }
+  .portfolio-skills__groups { grid-template-columns: 1fr; }
+}
